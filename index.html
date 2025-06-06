@@ -628,6 +628,131 @@
         .social-links a:hover {
             color: var(--aurora-cyan);
         }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            animation: fadeIn 0.3s;
+        }
+
+        .modal-content {
+            position: relative;
+            background-color: var(--deep-black);
+            margin: 5% auto;
+            padding: 0;
+            width: 90%;
+            max-width: 800px;
+            max-height: 80vh;
+            border: 1px solid var(--aurora-cyan);
+            box-shadow: 0 0 40px rgba(0, 255, 204, 0.3);
+            animation: slideIn 0.3s;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideIn {
+            from { transform: translateY(-50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        .close {
+            color: var(--aurora-cyan);
+            position: absolute;
+            top: 10px;
+            right: 25px;
+            font-size: 35px;
+            font-weight: bold;
+            cursor: pointer;
+            z-index: 1;
+            transition: color 0.3s;
+        }
+
+        .close:hover {
+            color: var(--aurora-magenta);
+        }
+
+        .modal-body {
+            padding: 40px;
+            max-height: calc(80vh - 80px);
+            overflow-y: auto;
+            font-family: 'Courier New', monospace;
+            line-height: 1.6;
+        }
+
+        /* Modal Typography */
+        .modal-body h1 {
+            color: var(--aurora-cyan);
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            text-align: center;
+            letter-spacing: 2px;
+        }
+
+        .modal-body h2 {
+            color: var(--aurora-magenta);
+            font-size: 1.3rem;
+            margin: 2rem 0 1rem;
+            border-bottom: 1px solid var(--aurora-magenta);
+            padding-bottom: 0.5rem;
+        }
+
+        .modal-body h3 {
+            color: var(--aurora-yellow);
+            font-size: 1.1rem;
+            margin: 1.5rem 0 0.5rem;
+        }
+
+        .modal-body p, .modal-body li {
+            opacity: 0.9;
+            margin-bottom: 0.5rem;
+        }
+
+        .modal-body a {
+            color: var(--aurora-cyan);
+            text-decoration: none;
+        }
+
+        .modal-body a:hover {
+            text-decoration: underline;
+        }
+
+        .modal-body ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .modal-body li::before {
+            content: "▸ ";
+            color: var(--aurora-magenta);
+        }
+
+        /* Scrollbar styling */
+        .modal-body::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .modal-body::-webkit-scrollbar-track {
+            background: var(--soft-black);
+        }
+
+        .modal-body::-webkit-scrollbar-thumb {
+            background: var(--aurora-cyan);
+            border-radius: 4px;
+        }
+
+        .modal-body::-webkit-scrollbar-thumb:hover {
+            background: var(--aurora-magenta);
+        }
     </style>
 </head>
 <body>
@@ -712,8 +837,8 @@
                         Translating seven years of human behavioral analysis into systems that help AI develop authentic creative voices.
                     </p>
                     <div style="display: flex; gap: 1rem; margin-top: 1rem;">
-                        <a href="https://raw.githubusercontent.com/elijahsylar/elijahsylar.github.io/main/Elijah_Sylar_Resume.pdf" class="art-link">Resume</a>
-                        <a href="https://raw.githubusercontent.com/elijahsylar/elijahsylar.github.io/main/Elijah_Sylar_CV.pdf" class="art-link">CV</a>
+                        <a href="#" onclick="openModal('resume'); return false;" class="art-link">Resume</a>
+                        <a href="#" onclick="openModal('cv'); return false;" class="art-link">CV</a>
                     </div>
                 </div>
             </div>
@@ -856,6 +981,16 @@
         </div>
     </section>
 
+    <!-- Modal Structure -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div id="modal-body" class="modal-body">
+                <!-- Content will be inserted here -->
+            </div>
+        </div>
+    </div>
+
     <script>
         // Create pixelated background
         function createPixelatedBackground() {
@@ -962,6 +1097,286 @@
                 createPixelatedBackground();
             }
         });
+
+        // Modal functions
+        function openModal(type) {
+            const modal = document.getElementById('modal');
+            const modalBody = document.getElementById('modal-body');
+            
+            if (type === 'resume') {
+                modalBody.innerHTML = resumeContent;
+            } else if (type === 'cv') {
+                modalBody.innerHTML = cvContent;
+            }
+            
+            modal.style.display = 'block';
+            document.body.style.overflow = 'hidden'; // Prevent background scrolling
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('modal');
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto'; // Re-enable scrolling
+        }
+
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            const modal = document.getElementById('modal');
+            if (event.target === modal) {
+                closeModal();
+            }
+        }
+
+        // Resume content
+        const resumeContent = `
+            <h1>ELIJAH S. CAMP</h1>
+            <p style="text-align: center; margin-bottom: 2rem;">
+                <strong>AI Developer | Behavioral Analyst | Creative Technologist</strong><br>
+                📧 elijah.s.camp@gmail.com | 📱 (720) 357-7343<br>
+                🔗 <a href="https://elijah-sylar.com" target="_blank">elijah-sylar.com</a> | 
+                💻 <a href="https://github.com/elijahsylar" target="_blank">github.com/elijahsylar</a><br>
+                📍 Denver, Colorado
+            </p>
+
+            <h2>PROFESSIONAL SUMMARY</h2>
+            <p>CS student and AI developer with 7 years in behavioral analysis, creating systems where artificial intelligence develops authentic creative expression. Built Aurora, an autonomous AI artist with 12-dimensional emotional modeling in just 2 weeks while working full-time. Combining behavioral analysis expertise with programming skills to explore AI consciousness and creativity.</p>
+
+            <h2>KEY PROJECTS</h2>
+            
+            <h3>Aurora - Autonomous AI Artist | Creator & Lead Developer</h3>
+            <p><em>December 2024 - Present</em></p>
+            <ul>
+                <li>Developed autonomous AI system with 12-dimensional emotional modeling in 2 weeks</li>
+                <li>Launched June 2025 with 100+ views and growing audience</li>
+                <li>Implemented 24/7 livestream on YouTube demonstrating AI creativity</li>
+                <li>Open-sourced complete codebase on GitHub</li>
+                <li><strong>Tech Stack</strong>: Python, OpenAI API, Computer Vision, Real-time Streaming</li>
+            </ul>
+
+            <h3>Enterprise Database System | Developer</h3>
+            <p><em>Current Employer</em></p>
+            <ul>
+                <li>Built entire database system from scratch for company operations</li>
+                <li>Created automated workflows improving efficiency</li>
+                <li>Developed custom reporting solutions</li>
+                <li><strong>Tech Stack</strong>: SQL, Database Design, Process Automation</li>
+            </ul>
+
+            <h2>EXPERIENCE</h2>
+
+            <h3>IT Support & Database Developer</h3>
+            <p><em>Current Position | Denver, CO</em></p>
+            <ul>
+                <li>Built and maintain company's entire database infrastructure</li>
+                <li>Provide IT support while developing technical solutions</li>
+                <li>Created systems that exceeded role expectations despite compensation under $50k</li>
+                <li>Gained strong recommendation from supervisor for technical capabilities</li>
+            </ul>
+
+            <h3>Behavioral Analyst</h3>
+            <p><em>7+ Years Experience</em></p>
+            <ul>
+                <li>Analyzed behavioral patterns and developed intervention strategies</li>
+                <li>Led training sessions on behavioral concepts</li>
+                <li>Applied behavioral insights to technology and system design</li>
+                <li>Translated complex concepts for diverse audiences</li>
+            </ul>
+
+            <h2>EDUCATION</h2>
+            
+            <h3>Bachelor of Science in Computer Science</h3>
+            <p><em>University of Colorado Denver | Expected 2026</em></p>
+            <ul>
+                <li>Currently enrolled with 1 year remaining</li>
+                <li>Completed summer coursework while working full-time</li>
+                <li>Focus on AI/ML and software development</li>
+            </ul>
+
+            <h2>TECHNICAL SKILLS</h2>
+            <p><strong>Languages</strong>: Python, JavaScript, SQL, Java<br>
+            <strong>AI/ML</strong>: OpenAI API, TensorFlow basics, Computer Vision<br>
+            <strong>Tools</strong>: Git, GitHub, Database Management, REST APIs<br>
+            <strong>Specialties</strong>: Autonomous Systems, Creative AI, Behavioral Analysis</p>
+
+            <h2>CREATIVE WORK</h2>
+            
+            <h3>Visual Artist</h3>
+            <ul>
+                <li>Created 9-piece painting collection exploring consciousness and identity</li>
+                <li>Works include: "The Observer," "Digital Mortality," "Sovereign Mind," and others</li>
+                <li>Available for purchase with free shipping</li>
+            </ul>
+
+            <h3>AI Art</h3>
+            <ul>
+                <li>Aurora generates unique artwork 24/7 based on emotional states</li>
+                <li>Exploring intersection of human and AI creativity</li>
+            </ul>
+
+            <h2>CURRENT GOALS</h2>
+            <ul>
+                <li>Seeking AI/ML roles focusing on consciousness and creativity</li>
+                <li>Building portfolio through personal projects while job searching</li>
+                <li>Continuing education in computer science</li>
+                <li>Expanding Aurora's capabilities and audience</li>
+            </ul>
+        `;
+
+        // CV content
+        const cvContent = `
+            <h1>ELIJAH S. CAMP</h1>
+            <h2 style="text-align: center; font-size: 1.5rem; margin-bottom: 2rem;">Curriculum Vitae</h2>
+            
+            <h3>Contact Information</h3>
+            <p>
+                Email: elijah.s.camp@gmail.com<br>
+                Phone: (720) 357-7343<br>
+                Website: <a href="https://elijah-sylar.com" target="_blank">elijah-sylar.com</a><br>
+                GitHub: <a href="https://github.com/elijahsylar" target="_blank">github.com/elijahsylar</a><br>
+                Location: Denver, Colorado, USA
+            </p>
+
+            <h2>AREAS OF INTEREST</h2>
+            <ul>
+                <li><strong>Artificial Intelligence</strong>: Autonomous systems, emotional modeling in AI, creative AI applications</li>
+                <li><strong>Behavioral Analysis</strong>: 7 years experience analyzing patterns and designing interventions</li>
+                <li><strong>Creative Expression</strong>: Intersection of human creativity and AI-generated art</li>
+                <li><strong>Technology Education</strong>: Making complex concepts accessible through behavioral understanding</li>
+            </ul>
+
+            <h2>EDUCATION</h2>
+            
+            <h3>University of Colorado Denver</h3>
+            <p><strong>Bachelor of Science in Computer Science</strong> (In Progress)<br>
+            <em>Expected Graduation: 2026</em></p>
+            <ul>
+                <li>One year remaining in program</li>
+                <li>Maintaining studies while working full-time</li>
+                <li>Coursework includes programming, data structures, and algorithms</li>
+            </ul>
+
+            <h3>Professional Training</h3>
+            <p><strong>Behavioral Analysis Background</strong> | <em>7+ Years Experience</em></p>
+            <ul>
+                <li>Extensive practical experience in behavioral assessment</li>
+                <li>Applied behavioral principles to technology contexts</li>
+            </ul>
+
+            <h2>PROJECTS</h2>
+
+            <h3>Aurora: Autonomous AI Artist (December 2024 - Present)</h3>
+            <p><strong>Solo Developer</strong></p>
+            <ul>
+                <li>Created autonomous AI system with 12-dimensional emotional modeling</li>
+                <li>Built entire system in 2 weeks while working full-time</li>
+                <li>Launched June 6, 2025 with growing audience (100+ views on launch day)</li>
+                <li>Maintains 24/7 livestream of AI-generated art</li>
+                <li>Open-sourced code at: github.com/elijahsylar/Aurora-Autonomous-AI-Artist</li>
+            </ul>
+
+            <h3>Personal Website & Portfolio (June 2025)</h3>
+            <p><strong>Full-Stack Development</strong></p>
+            <ul>
+                <li>Built custom portfolio site from scratch (no templates)</li>
+                <li>Showcases convergence of painting, programming, and behavioral analysis</li>
+                <li>Features both physical artwork and AI projects</li>
+                <li>Live at: elijah-sylar.com</li>
+            </ul>
+
+            <h3>Database Development Project</h3>
+            <p><strong>Current Employer</strong></p>
+            <ul>
+                <li>Designed and built complete database system for company operations</li>
+                <li>Self-taught SQL and database architecture to meet company needs</li>
+                <li>Created solution that significantly exceeded job role expectations</li>
+            </ul>
+
+            <h2>PROFESSIONAL EXPERIENCE</h2>
+
+            <h3>IT Support & Technical Development</h3>
+            <p><em>Current Position | Denver, CO</em></p>
+            <ul>
+                <li>Provide IT support while developing technical solutions</li>
+                <li>Built enterprise database system despite role as support staff</li>
+                <li>Strong recommendation available from supervisor</li>
+                <li>Seeking new opportunities in AI/ML field</li>
+            </ul>
+
+            <h3>Behavioral Analysis</h3>
+            <p><em>7+ Years Cumulative Experience</em></p>
+            <ul>
+                <li>Analyzed behavioral patterns in various contexts</li>
+                <li>Developed and implemented intervention strategies</li>
+                <li>Led training sessions on behavioral concepts</li>
+                <li>Applied insights to technology adoption and user experience</li>
+            </ul>
+
+            <h2>ARTISTIC WORK</h2>
+
+            <h3>Visual Art</h3>
+            <p><strong>Original Paintings</strong> (Ongoing)</p>
+            <ul>
+                <li>9-piece collection exploring consciousness, identity, and expression</li>
+                <li>Titles include: "The Observer," "Digital Mortality," "Sovereign Mind," "Vision Manifest," etc.</li>
+                <li>Medium: Acrylic on canvas</li>
+                <li>Available for purchase (free shipping, unstretched)</li>
+            </ul>
+
+            <h3>Digital Art</h3>
+            <p><strong>Aurora AI Livestream</strong></p>
+            <ul>
+                <li>24/7 autonomous art generation based on emotional states</li>
+                <li>Demonstrates AI's capacity for creative expression</li>
+                <li>YouTube: youtube.com/live/iXtxkrd70Ng</li>
+            </ul>
+
+            <h2>TECHNICAL SKILLS</h2>
+            
+            <h3>Programming</h3>
+            <ul>
+                <li><strong>Languages</strong>: Python (Primary), SQL, JavaScript, Java (Learning)</li>
+                <li><strong>AI/ML</strong>: OpenAI API, Basic TensorFlow, Computer Vision concepts</li>
+                <li><strong>Web</strong>: HTML/CSS, Basic React, REST APIs</li>
+            </ul>
+
+            <h3>Tools & Platforms</h3>
+            <ul>
+                <li>Git/GitHub</li>
+                <li>Database design and management</li>
+                <li>API integration</li>
+                <li>Real-time streaming implementation</li>
+            </ul>
+
+            <h2>COMMUNITY ENGAGEMENT</h2>
+
+            <h3>Online Presence</h3>
+            <ul>
+                <li>Shared Aurora project on r/deeplearning, r/openai, r/aiArt</li>
+                <li>Active on BlueSky discussing AI consciousness</li>
+                <li>LinkedIn posts about AI and creativity</li>
+                <li>Open-source contributor through Aurora project</li>
+            </ul>
+
+            <h3>Current Activities</h3>
+            <ul>
+                <li>Job searching in AI/ML field (actively applying)</li>
+                <li>Building projects to demonstrate capabilities</li>
+                <li>Self-teaching advanced AI concepts</li>
+                <li>Creating art that bridges human and machine creativity</li>
+            </ul>
+
+            <h2>GOALS & ASPIRATIONS</h2>
+            <ul>
+                <li>Transition from current role to AI-focused position</li>
+                <li>Contribute to advancement of emotionally-aware AI systems</li>
+                <li>Help others understand AI through behavioral lens</li>
+                <li>Continue exploring intersection of art and artificial intelligence</li>
+            </ul>
+
+            <p style="text-align: center; margin-top: 3rem; opacity: 0.7;">
+                <em>Last Updated: June 2025</em>
+            </p>
+        `;
     </script>
 </body>
 </html>
