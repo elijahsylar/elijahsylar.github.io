@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elijah Sylar - Digital Expression Studio</title>
+    <title>Elijah Sylar - Digital Expression Studio | Contemporary Art & AI Creation</title>
+    <meta name="description" content="Contemporary artist and AI developer exploring self-expression through painting, behavioral analysis, and autonomous AI creation. View original artworks and the Aurora AI project.">
+    <meta name="keywords" content="contemporary art, AI art, behavioral analysis, abstract painting, Denver artist, autonomous AI, digital expression, outsider art, neo-expressionism">
     <style>
         /* Aurora-Inspired Design System */
         :root {
@@ -399,6 +401,12 @@
         .painting-frame:nth-child(1) { animation-delay: 0.1s; }
         .painting-frame:nth-child(2) { animation-delay: 0.2s; }
         .painting-frame:nth-child(3) { animation-delay: 0.3s; }
+        .painting-frame:nth-child(4) { animation-delay: 0.4s; }
+        .painting-frame:nth-child(5) { animation-delay: 0.5s; }
+        .painting-frame:nth-child(6) { animation-delay: 0.6s; }
+        .painting-frame:nth-child(7) { animation-delay: 0.7s; }
+        .painting-frame:nth-child(8) { animation-delay: 0.8s; }
+        .painting-frame:nth-child(9) { animation-delay: 0.9s; }
 
         .painting-frame {
             position: relative;
@@ -494,6 +502,52 @@
             opacity: 0.9;
         }
 
+        /* Neon Sign Effect */
+        .neon-sign {
+            text-align: center;
+            margin: -1rem auto 2rem;
+            padding: 1rem;
+        }
+
+        .neon-text {
+            font-size: 0.9rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--aurora-magenta);
+            text-shadow: 
+                0 0 10px var(--aurora-magenta),
+                0 0 20px var(--aurora-magenta),
+                0 0 30px var(--aurora-magenta),
+                0 0 40px #ff0066,
+                0 0 70px #ff0066,
+                0 0 80px #ff0066,
+                0 0 100px #ff0066;
+            animation: neonFlicker 2s infinite alternate;
+        }
+
+        @keyframes neonFlicker {
+            0%, 100% {
+                text-shadow: 
+                    0 0 10px var(--aurora-magenta),
+                    0 0 20px var(--aurora-magenta),
+                    0 0 30px var(--aurora-magenta),
+                    0 0 40px #ff0066,
+                    0 0 70px #ff0066,
+                    0 0 80px #ff0066,
+                    0 0 100px #ff0066;
+            }
+            50% {
+                text-shadow: 
+                    0 0 5px var(--aurora-magenta),
+                    0 0 10px var(--aurora-magenta),
+                    0 0 15px var(--aurora-magenta),
+                    0 0 20px #ff0066,
+                    0 0 35px #ff0066,
+                    0 0 40px #ff0066,
+                    0 0 50px #ff0066;
+            }
+        }
+
         /* Gallery lighting effect */
         .artworks-gallery::before {
             content: '';
@@ -579,6 +633,9 @@
                 Where code becomes canvas and behavior becomes brushstroke
             </p>
             <p class="tagline">Artist • Developer • Behavioral Analyst</p>
+            <p style="margin-top: 2rem; font-size: 0.9rem; opacity: 0.7;">
+                Featuring 9 original paintings & live AI art generation
+            </p>
         </div>
     </section>
 
@@ -660,8 +717,18 @@
             <h2 class="section-title">Physical Expressions</h2>
             <p class="gallery-intro">
                 Where paint meets pattern recognition. Each piece explores the boundaries between 
-                human emotion and systematic observation.
+                human emotion and systematic observation.<br>
+                <span style="opacity: 0.7; font-size: 0.95rem;">Collection of 9 original paintings exploring consciousness, identity, and expression</span>
             </p>
+            <div class="neon-sign">
+                <p class="neon-text">FREE Shipping • Shipped Unstretched & Off Canvas Frame</p>
+            </div>
+            <p style="text-align: center; margin-bottom: 3rem; font-size: 1rem; opacity: 0.8;">
+                Message for inquiry about prices
+            </p>
+            <div style="text-align: center; margin-bottom: 4rem;">
+                <a href="#connect" class="art-link">Contact for Pricing</a>
+            </div>
             
             <div class="paintings-grid">
                 <div class="painting-frame">
@@ -687,6 +754,54 @@
                         <p>Consciousness looking back at itself</p>
                     </div>
                 </div>
+
+                <div class="painting-frame">
+                    <img src="https://raw.githubusercontent.com/elijahsylar/elijahsylar.github.io/refs/heads/main/5.jpg" alt="Abstract profile portrait with crown and celestial symbols contemporary art">
+                    <div class="painting-info">
+                        <h4>Sovereign Mind</h4>
+                        <p>Contemporary portrait exploring power, identity, and cosmic consciousness</p>
+                    </div>
+                </div>
+
+                <div class="painting-frame">
+                    <img src="https://raw.githubusercontent.com/elijahsylar/elijahsylar.github.io/refs/heads/main/7.jpg" alt="Abstract organic flower painting with bold outlines modern botanical art">
+                    <div class="painting-info">
+                        <h4>Biomorphic Bloom</h4>
+                        <p>Neo-expressionist botanical abstraction with flowing organic forms</p>
+                    </div>
+                </div>
+
+                <div class="painting-frame">
+                    <img src="https://raw.githubusercontent.com/elijahsylar/elijahsylar.github.io/refs/heads/main/6.jpg" alt="Yellow rose painting with wavy lines and stem contemporary floral art">
+                    <div class="painting-info">
+                        <h4>Electric Garden</h4>
+                        <p>Vibrant contemporary rose with psychedelic energy waves</p>
+                    </div>
+                </div>
+
+                <div class="painting-frame">
+                    <img src="https://raw.githubusercontent.com/elijahsylar/elijahsylar.github.io/refs/heads/main/8.jpg" alt="Blue face portrait with geometric arrow nose surrealist painting">
+                    <div class="painting-info">
+                        <h4>Directional Being</h4>
+                        <p>Surrealist portrait merging human form with wayfinding symbols</p>
+                    </div>
+                </div>
+
+                <div class="painting-frame">
+                    <img src="https://raw.githubusercontent.com/elijahsylar/elijahsylar.github.io/refs/heads/main/9.jpg" alt="Eye with hands painting blood splatter effect outsider art">
+                    <div class="painting-info">
+                        <h4>Vision Manifest</h4>
+                        <p>Raw outsider art exploring perception, creation, and visceral expression</p>
+                    </div>
+                </div>
+
+                <div class="painting-frame">
+                    <img src="https://raw.githubusercontent.com/elijahsylar/elijahsylar.github.io/refs/heads/main/4.jpg" alt="Mixed media cosmic collage with eye and mandala street art style">
+                    <div class="painting-info">
+                        <h4>Cosmic Transmission</h4>
+                        <p>Street art inspired mixed-media exploring universal connectivity</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -699,7 +814,7 @@
                 Whether you're exploring AI consciousness, seeking behavioral insights, 
                 or want to discuss the intersection of art and code, I'd love to connect.
             </p>
-            <a href="mailto:elijah.sylar@gmail.com" class="art-link">Send a Signal</a>
+            <a href="mailto:elijah.s.camp@gmail.com" class="art-link">Send a Signal</a>
             <div class="social-links">
                 <a href="https://github.com/elijahsylar" target="_blank">GitHub</a>
                 <a href="https://linkedin.com/in/elijahsylar" target="_blank">LinkedIn</a>
