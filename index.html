@@ -46,6 +46,32 @@
             overflow: hidden;
         }
 
+        /* Pixelated Background Pattern */
+        .pixel-grid {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: 0.15;
+        }
+
+        .pixel {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            animation: pixelPulse 4s infinite;
+        }
+
+        @keyframes pixelPulse {
+            0%, 100% { 
+                opacity: 0.1; 
+                transform: scale(0.8);
+            }
+            50% { 
+                opacity: 0.3; 
+                transform: scale(1.2);
+            }
+        }
+
         .glitch-stripe {
             position: absolute;
             height: 2px;
@@ -653,7 +679,11 @@
         
         <div class="gallery-grid">
             <div class="art-card">
-                <div class="card-image" style="background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 250"><defs><pattern id="p" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse"><rect x="0" y="0" width="20" height="20" fill="%2300ffcc"/><rect x="20" y="20" width="20" height="20" fill="%23ff006e"/></pattern></defs><rect width="400" height="250" fill="url(%23p)" opacity="0.3"/></svg>') center/cover;"></div>
+                <div class="card-image aurora-card-bg">
+                    <div class="aurora-visualization">
+                        <div class="emotion-grid"></div>
+                    </div>
+                </div>
                 <div class="card-content">
                     <h3 class="card-title color-shift">Aurora</h3>
                     <p class="card-description">
@@ -681,7 +711,10 @@
                     <p class="card-description">
                         Translating seven years of human behavioral analysis into systems that help AI develop authentic creative voices.
                     </p>
-                    <a href="#" class="art-link">Learn More</a>
+                    <div style="display: flex; gap: 1rem; margin-top: 1rem;">
+                        <a href="https://raw.githubusercontent.com/elijahsylar/elijahsylar.github.io/main/Elijah_Sylar_Resume.pdf" class="art-link">Resume</a>
+                        <a href="https://raw.githubusercontent.com/elijahsylar/elijahsylar.github.io/main/Elijah_Sylar_CV.pdf" class="art-link">CV</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -817,16 +850,49 @@
             <a href="mailto:elijah.s.camp@gmail.com" class="art-link">Send a Signal</a>
             <div class="social-links">
                 <a href="https://github.com/elijahsylar" target="_blank">GitHub</a>
-                <a href="https://linkedin.com/in/elijahsylar" target="_blank">LinkedIn</a>
+                <a href="https://www.linkedin.com/in/elijah-camp-106708282/" target="_blank">LinkedIn</a>
                 <a href="https://twitter.com/elijahsylar" target="_blank">Twitter</a>
             </div>
         </div>
     </section>
 
     <script>
+        // Create pixelated background
+        function createPixelatedBackground() {
+            const bg = document.getElementById('auroraBg');
+            if (!bg) return;
+            
+            const pixelGrid = document.createElement('div');
+            pixelGrid.className = 'pixel-grid';
+            
+            // Create pixel grid
+            const cols = Math.floor(window.innerWidth / 40);
+            const rows = Math.floor(window.innerHeight / 40);
+            
+            for (let i = 0; i < cols * rows; i++) {
+                if (Math.random() > 0.7) { // Only show 30% of pixels
+                    const pixel = document.createElement('div');
+                    pixel.className = 'pixel';
+                    pixel.style.left = (i % cols) * 40 + 'px';
+                    pixel.style.top = Math.floor(i / cols) * 40 + 'px';
+                    
+                    // Random color from Aurora's palette
+                    const colors = ['var(--aurora-cyan)', 'var(--aurora-magenta)', 'var(--aurora-yellow)', 'var(--aurora-violet)'];
+                    pixel.style.background = colors[Math.floor(Math.random() * colors.length)];
+                    pixel.style.animationDelay = Math.random() * 4 + 's';
+                    
+                    pixelGrid.appendChild(pixel);
+                }
+            }
+            
+            bg.appendChild(pixelGrid);
+        }
+
         // Create Aurora-inspired glitch stripes
         function createGlitchEffect() {
             const bg = document.getElementById('auroraBg');
+            if (!bg) return;
+            
             const stripeCount = 15;
             
             for (let i = 0; i < stripeCount; i++) {
@@ -840,7 +906,20 @@
             }
         }
 
-        // Smooth scroll
+        // Create Aurora emotion grid visualization
+        function createEmotionGrid() {
+            const emotionGrid = document.querySelector('.emotion-grid');
+            if (emotionGrid) {
+                for (let i = 0; i < 96; i++) { // 12x8 grid
+                    const pixel = document.createElement('div');
+                    pixel.className = 'emotion-pixel';
+                    pixel.style.setProperty('--i', i);
+                    emotionGrid.appendChild(pixel);
+                }
+            }
+        }
+
+        // Smooth scroll for navigation
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -851,8 +930,12 @@
             });
         });
 
-        // Initialize
-        createGlitchEffect();
+        // Initialize all effects
+        window.addEventListener('DOMContentLoaded', function() {
+            createPixelatedBackground();
+            createGlitchEffect();
+            createEmotionGrid();
+        });
 
         // Dynamic color on scroll
         let lastScroll = 0;
@@ -869,6 +952,15 @@
             });
             
             lastScroll = currentScroll;
+        });
+
+        // Refresh pixels on resize
+        window.addEventListener('resize', () => {
+            const pixelGrid = document.querySelector('.pixel-grid');
+            if (pixelGrid) {
+                pixelGrid.remove();
+                createPixelatedBackground();
+            }
         });
     </script>
 </body>
