@@ -373,12 +373,40 @@
             padding: 2rem 0;
         }
 
+        /* Professional loading animation */
+        @keyframes fadeIn {
+            from { 
+                opacity: 0; 
+                transform: translateY(30px);
+            }
+            to { 
+                opacity: 1; 
+                transform: translateY(0);
+            }
+        }
+
         .painting-frame {
             position: relative;
             background: var(--soft-black);
             padding: 1rem;
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
             border: 1px solid rgba(255, 255, 255, 0.05);
+            overflow: hidden;
+            animation: fadeIn 0.8s ease-out;
+            animation-fill-mode: both;
+        }
+
+        .painting-frame:nth-child(1) { animation-delay: 0.1s; }
+        .painting-frame:nth-child(2) { animation-delay: 0.2s; }
+        .painting-frame:nth-child(3) { animation-delay: 0.3s; }
+
+        .painting-frame {
+            position: relative;
+            background: var(--soft-black);
+            padding: 1rem;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            overflow: hidden;
         }
 
         .painting-frame::before {
@@ -391,30 +419,55 @@
             z-index: -1;
         }
 
+        .painting-frame::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 0;
+            height: 0;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            transition: all 0.6s;
+            pointer-events: none;
+        }
+
         .painting-frame:hover {
             transform: translateY(-10px) scale(1.02);
-            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+            box-shadow: 
+                0 30px 60px rgba(0, 0, 0, 0.5),
+                0 0 100px rgba(0, 255, 204, 0.1);
         }
 
         .painting-frame:hover::before {
             opacity: 0.3;
         }
 
+        .painting-frame:hover::after {
+            width: 200%;
+            height: 200%;
+        }
+
         .painting-frame img {
             width: 100%;
-            height: auto;
+            height: 350px;
+            object-fit: cover;
             display: block;
-            filter: brightness(0.9);
-            transition: filter 0.4s;
+            filter: brightness(0.9) contrast(1.1);
+            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         .painting-frame:hover img {
-            filter: brightness(1);
+            filter: brightness(1) contrast(1.15) saturate(1.1);
+            transform: scale(1.05);
         }
 
         .painting-info {
             padding: 1.5rem 0.5rem 0.5rem;
             text-align: center;
+            position: relative;
+            background: var(--soft-black);
+            z-index: 1;
         }
 
         .painting-info h4 {
@@ -423,12 +476,22 @@
             letter-spacing: 1px;
             margin-bottom: 0.5rem;
             color: var(--aurora-cyan);
+            transition: all 0.3s;
+        }
+
+        .painting-frame:hover .painting-info h4 {
+            text-shadow: 0 0 20px var(--aurora-cyan);
         }
 
         .painting-info p {
             font-size: 0.9rem;
             opacity: 0.7;
             font-style: italic;
+            transition: opacity 0.3s;
+        }
+
+        .painting-frame:hover .painting-info p {
+            opacity: 0.9;
         }
 
         /* Gallery lighting effect */
@@ -602,7 +665,7 @@
             
             <div class="paintings-grid">
                 <div class="painting-frame">
-                    <img src="images/geometric-figure.jpg" alt="Geometric figure with tribal patterns on splattered background">
+                    <img src="https://raw.githubusercontent.com/elijahsylar/elijahsylar.github.io/refs/heads/main/geometric-figure.jpg" alt="Geometric figure with tribal patterns on splattered background">
                     <div class="painting-info">
                         <h4>Structured Chaos</h4>
                         <p>Geometric patterns emerging from organic disorder</p>
@@ -610,7 +673,7 @@
                 </div>
                 
                 <div class="painting-frame">
-                    <img src="images/skull-portrait.jpg" alt="Vibrant skull portrait with orange background and green grass">
+                    <img src="https://raw.githubusercontent.com/elijahsylar/elijahsylar.github.io/refs/heads/main/skull-portrait.jpg" alt="Vibrant skull portrait with orange background and green grass">
                     <div class="painting-info">
                         <h4>Digital Mortality</h4>
                         <p>Life and death rendered in electric hues</p>
@@ -618,7 +681,7 @@
                 </div>
                 
                 <div class="painting-frame">
-                    <img src="images/neon-eye.jpg" alt="Surreal green eye with neon outline on flesh-toned background">
+                    <img src="https://raw.githubusercontent.com/elijahsylar/elijahsylar.github.io/refs/heads/main/neon-eye.jpg" alt="Surreal green eye with neon outline on flesh-toned background">
                     <div class="painting-info">
                         <h4>The Observer</h4>
                         <p>Consciousness looking back at itself</p>
@@ -636,7 +699,7 @@
                 Whether you're exploring AI consciousness, seeking behavioral insights, 
                 or want to discuss the intersection of art and code, I'd love to connect.
             </p>
-            <a href="mailto:your.email@example.com" class="art-link">Send a Signal</a>
+            <a href="mailto:elijah.sylar@gmail.com" class="art-link">Send a Signal</a>
             <div class="social-links">
                 <a href="https://github.com/elijahsylar" target="_blank">GitHub</a>
                 <a href="https://linkedin.com/in/elijahsylar" target="_blank">LinkedIn</a>
