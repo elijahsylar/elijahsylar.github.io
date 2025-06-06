@@ -1,41 +1,4 @@
-// Create neural network background
-        function createNeuralNetwork() {
-            const neuralBg = document.getElementById('neuralBg');
-            const nodes = 30;
-            
-            for (let i = 0; i < nodes; i++) {
-                const node = document.createElement('div');
-                node.className = 'neural-node';
-                node.style.left = Math.random() * 100 + '%';
-                node.style.top = Math.random() * 100 + '%';
-                node.style.animationDelay = Math.random() * 4 + 's';
-                neuralBg.appendChild(node);
-            }
-        }
-
-        // Smooth scroll for navigation
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth' });
-                }
-            });
-        });
-
-        // Initialize
-        createNeuralNetwork();
-
-        // Interactive consciousness gauge
-        const gauge = document.querySelector('.consciousness-gauge');
-        let consciousness = 0;
-        
-        gauge.addEventListener('mouseenter', () => {
-            consciousness = Math.random() * 180;
-            document.querySelector('.gauge-needle').style.transform = 
-                `translateX(-50%) rotate(${consciousness}deg)`;
-        });<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
