@@ -299,7 +299,7 @@
         }
 
         .hero::before {
-            content: 'WARNING: CONSCIOUSNESS BREACH DETECTED';
+            content: 'WARNING: CREATIVITY OVERFLOW DETECTED';
             position: absolute;
             top: 20%;
             left: 50%;
@@ -1275,7 +1275,7 @@
             <ul class="nav-links">
                 <li><a href="#aurora">Aurora</a></li>
                 <li><a href="#artworks">Artworks</a></li>
-                <li><a href="#code">Code</a></li>
+                <li><a href="#" onclick="openModal('github'); return false;">Code</a></li>
                 <li><a href="#connect">Connect</a></li>
             </ul>
         </nav>
@@ -1385,7 +1385,7 @@
             <p class="gallery-intro">
                 WHERE PAINT MEETS PATTERN RECOGNITION. EACH PIECE EXPLORES THE BOUNDARIES BETWEEN 
                 HUMAN EMOTION AND SYSTEMATIC OBSERVATION.<br>
-                <span style="opacity: 0.7; font-size: 0.95rem;">COLLECTION OF 9 ORIGINAL PAINTINGS EXPLORING CONSCIOUSNESS, IDENTITY, AND EXPRESSION</span>
+                <span style="opacity: 0.7; font-size: 0.95rem;">COLLECTION OF 9 ORIGINAL PAINTINGS EXPLORING PERCEPTION, IDENTITY, AND EXPRESSION</span>
             </p>
             <div class="neon-sign">
                 <p class="neon-text">FREE Shipping • Shipped Unstretched & Off Canvas Frame</p>
@@ -1418,7 +1418,7 @@
                     <img src="https://raw.githubusercontent.com/elijahsylar/elijahsylar.github.io/refs/heads/main/neon-eye.jpg" alt="Surreal green eye with neon outline on flesh-toned background">
                     <div class="painting-info">
                         <h4>The Observer</h4>
-                        <p>Consciousness looking back at itself</p>
+                        <p>Perception looking back at itself</p>
                     </div>
                 </div>
 
@@ -1426,7 +1426,7 @@
                     <img src="https://raw.githubusercontent.com/elijahsylar/elijahsylar.github.io/refs/heads/main/5.jpg" alt="Abstract profile portrait with crown and celestial symbols contemporary art">
                     <div class="painting-info">
                         <h4>Sovereign Mind</h4>
-                        <p>Contemporary portrait exploring power, identity, and cosmic consciousness</p>
+                        <p>Contemporary portrait exploring power, identity, and cosmic awareness</p>
                     </div>
                 </div>
 
@@ -1478,14 +1478,14 @@
         <div class="connect-content">
             <h2 class="section-title">LET'S CREATE TOGETHER</h2>
             <p class="connect-text">
-                WHETHER YOU'RE EXPLORING AI CONSCIOUSNESS, SEEKING BEHAVIORAL INSIGHTS, 
+                WHETHER YOU'RE EXPLORING AI CREATIVITY, SEEKING BEHAVIORAL INSIGHTS, 
                 OR WANT TO DISCUSS THE INTERSECTION OF ART AND CODE, I'D LOVE TO CONNECT.
             </p>
             <a href="mailto:elijah.s.camp@gmail.com" class="art-link">Send a Signal</a>
             <div class="social-links">
                 <a href="https://github.com/elijahsylar" target="_blank">GitHub</a>
                 <a href="https://www.linkedin.com/in/elijah-camp-106708282/" target="_blank">LinkedIn</a>
-                <a href="https://twitter.com/elijahsylar" target="_blank">Twitter</a>
+                <a href="https://youtube.com/live/iXtxkrd70Ng" target="_blank">YouTube</a>
             </div>
         </div>
     </section>
@@ -1616,6 +1616,8 @@
                 modalBody.innerHTML = resumeContent;
             } else if (type === 'cv') {
                 modalBody.innerHTML = cvContent;
+            } else if (type === 'github') {
+                modalBody.innerHTML = githubContent;
             }
             
             modal.style.display = 'block';
@@ -1648,7 +1650,7 @@
             </p>
 
             <h2>PROFESSIONAL SUMMARY</h2>
-            <p>CS student and AI developer with 7 years in behavioral analysis, creating systems where artificial intelligence develops authentic creative expression. Built Aurora, an autonomous AI artist with 12-dimensional emotional modeling in just 2 weeks while working full-time. Combining behavioral analysis expertise with programming skills to explore AI consciousness and creativity.</p>
+            <p>CS student and AI developer with 7 years in behavioral analysis, creating systems where artificial intelligence develops authentic creative expression. Built Aurora, an autonomous AI artist with 12-dimensional emotional modeling in just 2 weeks while working full-time. Combining behavioral analysis expertise with programming skills to explore AI creativity and authentic expression.</p>
 
             <h2>KEY PROJECTS</h2>
             
@@ -1711,7 +1713,7 @@
             
             <h3>Visual Artist</h3>
             <ul>
-                <li>Created 9-piece painting collection exploring consciousness and identity</li>
+                <li>Created 9-piece painting collection exploring perception and identity</li>
                 <li>Works include: "The Observer," "Digital Mortality," "Sovereign Mind," and others</li>
                 <li>Available for purchase with free shipping</li>
             </ul>
@@ -1724,7 +1726,7 @@
 
             <h2>CURRENT GOALS</h2>
             <ul>
-                <li>Seeking AI/ML roles focusing on consciousness and creativity</li>
+                <li>Seeking AI/ML roles focusing on creative expression and innovation</li>
                 <li>Building portfolio through personal projects while job searching</li>
                 <li>Continuing education in computer science</li>
                 <li>Expanding Aurora's capabilities and audience</li>
@@ -1825,7 +1827,7 @@
             <h3>Visual Art</h3>
             <p><strong>Original Paintings</strong> (Ongoing)</p>
             <ul>
-                <li>9-piece collection exploring consciousness, identity, and expression</li>
+                <li>9-piece collection exploring perception, identity, and expression</li>
                 <li>Titles include: "The Observer," "Digital Mortality," "Sovereign Mind," "Vision Manifest," etc.</li>
                 <li>Medium: Acrylic on canvas</li>
                 <li>Available for purchase (free shipping, unstretched)</li>
@@ -1861,7 +1863,7 @@
             <h3>Online Presence</h3>
             <ul>
                 <li>Shared Aurora project on r/deeplearning, r/openai, r/aiArt</li>
-                <li>Active on BlueSky discussing AI consciousness</li>
+                <li>Active on BlueSky discussing AI creativity and expression</li>
                 <li>LinkedIn posts about AI and creativity</li>
                 <li>Open-source contributor through Aurora project</li>
             </ul>
@@ -1885,6 +1887,61 @@
             <p style="text-align: center; margin-top: 3rem; opacity: 0.7;">
                 <em>Last Updated: June 2025</em>
             </p>
+        `;
+
+        // GitHub content
+        const githubContent = `
+            <h1 style="text-align: center; margin-bottom: 3rem;">[ CODE REPOSITORY ]</h1>
+            
+            <div style="text-align: center; margin: 4rem 0;">
+                <p style="font-size: 1.2rem; margin-bottom: 2rem; text-transform: uppercase; letter-spacing: 3px; color: var(--toxic-green);">
+                    ACCESS GRANTED TO SOURCE CODE
+                </p>
+                
+                <div style="border: 2px solid var(--neon-cyan); padding: 2rem; display: inline-block; background: rgba(0, 255, 204, 0.1);">
+                    <p style="font-size: 1rem; margin-bottom: 2rem; opacity: 0.8;">
+                        EXPLORE THE SYSTEMS BEHIND THE ART
+                    </p>
+                    
+                    <a href="https://github.com/elijahsylar" target="_blank" 
+                       style="display: inline-block; padding: 1rem 3rem; border: 2px solid var(--neon-cyan); 
+                              color: var(--neon-cyan); text-decoration: none; font-size: 1.2rem; 
+                              letter-spacing: 3px; text-transform: uppercase; transition: all 0.3s;
+                              position: relative; overflow: hidden;"
+                       onmouseover="this.style.color='var(--void-black)'; this.style.background='var(--neon-cyan)'; this.style.boxShadow='0 0 30px var(--neon-cyan)';"
+                       onmouseout="this.style.color='var(--neon-cyan)'; this.style.background='transparent'; this.style.boxShadow='none';">
+                        > ENTER GITHUB <
+                    </a>
+                </div>
+                
+                <div style="margin-top: 3rem;">
+                    <h2 style="color: var(--neon-pink); margin-bottom: 2rem;">FEATURED REPOSITORIES</h2>
+                    
+                    <div style="text-align: left; max-width: 500px; margin: 0 auto;">
+                        <div style="margin-bottom: 2rem; padding: 1rem; border-left: 3px solid var(--neon-cyan);">
+                            <h3 style="color: var(--neon-cyan); margin-bottom: 0.5rem;">AURORA-AUTONOMOUS-AI-ARTIST</h3>
+                            <p style="opacity: 0.7;">12-DIMENSIONAL EMOTIONAL MODELING SYSTEM</p>
+                            <p style="opacity: 0.5; font-size: 0.8rem;">PYTHON // TENSORFLOW // REAL-TIME STREAMING</p>
+                        </div>
+                        
+                        <div style="margin-bottom: 2rem; padding: 1rem; border-left: 3px solid var(--toxic-green);">
+                            <h3 style="color: var(--toxic-green); margin-bottom: 0.5rem;">BEHAVIORAL-SYNTHESIS</h3>
+                            <p style="opacity: 0.7;">TRANSLATING HUMAN PATTERNS TO AI SYSTEMS</p>
+                            <p style="opacity: 0.5; font-size: 0.8rem;">RESEARCH // DOCUMENTATION // FRAMEWORKS</p>
+                        </div>
+                        
+                        <div style="margin-bottom: 2rem; padding: 1rem; border-left: 3px solid var(--electric-purple);">
+                            <h3 style="color: var(--electric-purple); margin-bottom: 0.5rem;">CREATIVE-CODING</h3>
+                            <p style="opacity: 0.7;">EXPERIMENTS IN DIGITAL EXPRESSION</p>
+                            <p style="opacity: 0.5; font-size: 0.8rem;">JAVASCRIPT // P5.JS // GENERATIVE ART</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <p style="margin-top: 3rem; opacity: 0.5; font-size: 0.8rem; letter-spacing: 2px;">
+                    [ ALL CODE OPEN SOURCE - FREE TO FORK AND MODIFY ]
+                </p>
+            </div>
         `;
     </script>
 </body>
