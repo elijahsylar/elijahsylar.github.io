@@ -3,11 +3,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elijah Sylar - Digital Expression Studio | Contemporary Art & AI Creation</title>
-    <meta name="description" content="Contemporary artist and AI developer exploring self-expression through painting, behavioral analysis, and autonomous AI creation. View original artworks and the Aurora AI project.">
-    <meta name="keywords" content="contemporary art, AI art, behavioral analysis, abstract painting, Denver artist, autonomous AI, digital expression, outsider art, neo-expressionism">
+    <title>Elijah Sylar - AI Artist & Creative Developer | Autonomous AI Art | Denver, CO</title>
+    <meta name="description" content="Denver AI artist and creative developer specializing in autonomous AI art, behavioral analysis, and digital expression. Creator of Aurora - a 24/7 AI artist with 12-dimensional emotional modeling. View original paintings and live AI art generation.">
+    <meta name="keywords" content="AI artist Denver, autonomous AI art, creative developer Colorado, machine learning artist, behavioral analysis AI, contemporary digital art, AI consciousness research, creative coding portfolio, Aurora AI artist, generative art developer, neo-expressionist AI, AI art for sale, emotional AI modeling, artificial intelligence creativity, Three.js developer Denver">
+    <meta name="author" content="Elijah Sylar">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://elijah-sylar.com">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Elijah Sylar - AI Artist & Creative Developer | Aurora Autonomous AI">
+    <meta property="og:description" content="Denver-based AI artist creating autonomous art through emotional modeling. Aurora AI creates 24/7. Original paintings available. Bridging human creativity and AI consciousness.">
+    <meta property="og:image" content="https://elijah-sylar.com/aurora-preview.jpg">
+    <meta property="og:url" content="https://elijah-sylar.com">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Elijah Sylar Digital Studio">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Elijah Sylar - AI Artist & Creative Developer | Aurora Autonomous AI">
+    <meta name="twitter:description" content="Creating autonomous AI art through emotional modeling. Aurora AI creates 24/7. Original paintings available.">
+    <meta name="twitter:image" content="https://elijah-sylar.com/aurora-preview.jpg">
+    
+    <!-- Enhanced Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Elijah Sylar",
+      "alternateName": "Elijah S. Camp",
+      "jobTitle": "AI Artist and Creative Developer",
+      "description": "AI developer and contemporary artist specializing in autonomous AI creation, behavioral analysis, and creative technology",
+      "url": "https://elijah-sylar.com",
+      "image": "https://elijah-sylar.com/profile-image.jpg",
+      "sameAs": [
+        "https://github.com/elijahsylar",
+        "https://www.linkedin.com/in/elijah-camp-106708282/",
+        "https://www.youtube.com/@elijahsylar"
+      ],
+      "knowsAbout": [
+        "Artificial Intelligence",
+        "Machine Learning",
+        "Behavioral Analysis", 
+        "Contemporary Art",
+        "AI Consciousness",
+        "Creative Technology",
+        "Generative Art",
+        "Three.js",
+        "Python Programming"
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Denver",
+        "addressRegion": "Colorado",
+        "addressCountry": "United States"
+      },
+      "makesOffer": {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "AI Art Development and Creative Coding"
+        }
+      }
+    }
+    </script>
+    
+    <!-- Aurora Project Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareSourceCode",
+      "name": "Aurora - Autonomous AI Artist",
+      "description": "An autonomous AI system with 12-dimensional emotional modeling that creates art 24/7",
+      "creator": {
+        "@type": "Person",
+        "name": "Elijah Sylar"
+      },
+      "programmingLanguage": "Python",
+      "codeRepository": "https://github.com/elijahsylar/Aurora-Autonomous-AI-Artist",
+      "dateCreated": "2024-12",
+      "keywords": "AI art, autonomous systems, emotional modeling, generative art"
+    }
+    </script>
+    
+    <!-- Art Collection Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "Original Paintings by Elijah Sylar",
+      "description": "Collection of 9 original paintings exploring perception, identity, and expression",
+      "creator": {
+        "@type": "Person",
+        "name": "Elijah Sylar"
+      },
+      "hasPart": [
+        {
+          "@type": "VisualArtwork",
+          "name": "The Watcher",
+          "artMedium": "Acrylic on canvas",
+          "description": "Perception analyzing its own mechanisms"
+        },
+        {
+          "@type": "VisualArtwork",
+          "name": "Electric Mortality",
+          "artMedium": "Acrylic on canvas",
+          "description": "Neo-expressionist take on life and death themes"
+        }
+      ]
+    }
+    </script>
+    
     <style>
-        /* CYBERPUNK Design System */
+        /* INDUSTRIAL CYBERPUNK Design System */
         :root {
             --neon-cyan: #00ffcc;
             --neon-pink: #ff0066;
@@ -21,6 +128,7 @@
             --steel-gray: #1a1a1a;
             --smoke-gray: #2d2d2d;
             --dirty-white: #cccccc;
+            --circuit-blue: #001a33;
         }
 
         * {
@@ -38,88 +146,71 @@
             text-shadow: 0 0 2px rgba(0, 255, 204, 0.3);
         }
 
-        /* Industrial Grid Overlay */
-        body::before {
-            content: '';
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: 
-                repeating-linear-gradient(0deg, 
-                    transparent, 
-                    transparent 2px, 
-                    rgba(0, 255, 204, 0.03) 2px, 
-                    rgba(0, 255, 204, 0.03) 4px),
-                repeating-linear-gradient(90deg, 
-                    transparent, 
-                    transparent 2px, 
-                    rgba(255, 0, 102, 0.03) 2px, 
-                    rgba(255, 0, 102, 0.03) 4px);
-            pointer-events: none;
-            z-index: 1;
-        }
-
-        /* HARSH Glitch Background */
-        .aurora-bg {
+        /* Circuit Board Background */
+        .circuit-bg {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
             z-index: -1;
+            background: var(--void-black);
             overflow: hidden;
-            background: 
-                repeating-linear-gradient(
-                    180deg,
-                    var(--void-black) 0px,
-                    var(--oil-black) 2px,
-                    var(--void-black) 4px
-                );
         }
 
-        /* Aggressive Pixelated Pattern */
-        .pixel-grid {
+        .circuit-bg::before {
+            content: '';
             position: absolute;
             width: 100%;
             height: 100%;
-            opacity: 0.4;
-            mix-blend-mode: screen;
+            background-image: 
+                /* Horizontal lines */
+                repeating-linear-gradient(
+                    0deg,
+                    transparent,
+                    transparent 50px,
+                    rgba(0, 255, 204, 0.05) 50px,
+                    rgba(0, 255, 204, 0.05) 51px
+                ),
+                /* Vertical lines */
+                repeating-linear-gradient(
+                    90deg,
+                    transparent,
+                    transparent 50px,
+                    rgba(255, 0, 102, 0.05) 50px,
+                    rgba(255, 0, 102, 0.05) 51px
+                );
+            animation: circuitPulse 20s linear infinite;
         }
 
-        .pixel {
+        @keyframes circuitPulse {
+            0%, 100% { opacity: 0.5; }
+            50% { opacity: 1; }
+        }
+
+        /* Circuit Nodes */
+        .circuit-node {
             position: absolute;
-            width: 30px;
-            height: 30px;
-            animation: harshPulse 2s infinite;
-            filter: blur(0.5px);
+            width: 6px;
+            height: 6px;
+            background: var(--neon-cyan);
+            border-radius: 50%;
+            box-shadow: 0 0 10px var(--neon-cyan);
+            animation: nodePulse 4s infinite;
         }
 
-        @keyframes harshPulse {
+        @keyframes nodePulse {
             0%, 100% { 
-                opacity: 0.2; 
-                transform: scale(1) rotate(0deg);
-                filter: brightness(1);
-            }
-            25% { 
-                opacity: 1; 
-                transform: scale(1.5) rotate(45deg);
-                filter: brightness(2) saturate(2);
+                opacity: 0.3;
+                transform: scale(1);
             }
             50% { 
-                opacity: 0.1; 
-                transform: scale(0.5) rotate(90deg);
-                filter: brightness(0.5);
-            }
-            75% { 
-                opacity: 0.8; 
-                transform: scale(1.2) rotate(-45deg);
-                filter: brightness(1.5) hue-rotate(180deg);
+                opacity: 1;
+                transform: scale(1.5);
             }
         }
 
-        /* Distorted Glitch Stripes */
+        /* Glitch Stripes */
         .glitch-stripe {
             position: absolute;
             height: 2px;
@@ -134,32 +225,14 @@
                 var(--blood-red) 40%,
                 transparent 50%);
             transform: rotate(-45deg) translateX(-50%);
-            animation: glitchDistort 10s linear infinite;
-            opacity: 0.6;
+            animation: glitchMove 15s linear infinite;
+            opacity: 0.4;
             mix-blend-mode: add;
         }
 
-        @keyframes glitchDistort {
-            0% { 
-                transform: rotate(-45deg) translateX(-50%) translateY(0) scaleY(1);
-                filter: hue-rotate(0deg);
-            }
-            25% {
-                transform: rotate(-45deg) translateX(-50%) translateY(50vh) scaleY(3);
-                filter: hue-rotate(90deg);
-            }
-            50% {
-                transform: rotate(-45deg) translateX(-50%) translateY(100vh) scaleY(0.5);
-                filter: hue-rotate(180deg);
-            }
-            75% {
-                transform: rotate(-45deg) translateX(-50%) translateY(150vh) scaleY(2);
-                filter: hue-rotate(270deg);
-            }
-            100% { 
-                transform: rotate(-45deg) translateX(-50%) translateY(200vh) scaleY(1);
-                filter: hue-rotate(360deg);
-            }
+        @keyframes glitchMove {
+            0% { transform: rotate(-45deg) translateX(-50%) translateY(0); }
+            100% { transform: rotate(-45deg) translateX(-50%) translateY(200vh); }
         }
 
         /* INDUSTRIAL Navigation */
@@ -167,7 +240,7 @@
             position: fixed;
             top: 0;
             width: 100%;
-            background: var(--void-black);
+            background: rgba(0, 0, 0, 0.9);
             backdrop-filter: blur(10px);
             border-bottom: 2px solid var(--blood-red);
             z-index: 1000;
@@ -665,9 +738,28 @@
 
         /* Aurora Live Feed */
         .aurora-section {
-            background: var(--digital-gray);
+            background: linear-gradient(180deg, var(--void-black) 0%, var(--oil-black) 100%);
             padding: 5rem 2rem;
             text-align: center;
+            border-top: 2px solid var(--electric-purple);
+            position: relative;
+        }
+
+        .aurora-section::before {
+            content: '[ AURORA AI LIVE FEED ]';
+            position: absolute;
+            top: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            color: var(--electric-purple);
+            font-size: 0.8rem;
+            letter-spacing: 5px;
+            animation: connectionPulse 2s infinite;
+        }
+
+        @keyframes connectionPulse {
+            0%, 100% { opacity: 0.5; }
+            50% { opacity: 1; }
         }
 
         .live-indicator {
@@ -675,7 +767,7 @@
             align-items: center;
             gap: 0.5rem;
             margin-bottom: 2rem;
-            color: var(--aurora-magenta);
+            color: var(--neon-pink);
             font-size: 0.9rem;
             letter-spacing: 2px;
             text-transform: uppercase;
@@ -684,7 +776,7 @@
         .live-dot {
             width: 8px;
             height: 8px;
-            background: var(--aurora-magenta);
+            background: var(--neon-pink);
             border-radius: 50%;
             animation: pulse 2s infinite;
         }
@@ -692,15 +784,6 @@
         @keyframes pulse {
             0%, 100% { opacity: 1; transform: scale(1); }
             50% { opacity: 0.5; transform: scale(1.2); }
-        }
-
-        /* Mobile Responsive */
-        @media (max-width: 768px) {
-            .title { font-size: 2.5rem; }
-            .subtitle { font-size: 1.2rem; }
-            .nav-links { gap: 1.5rem; }
-            .gallery-grid { grid-template-columns: 1fr; }
-            .paintings-grid { grid-template-columns: 1fr; }
         }
 
         /* INDUSTRIAL Artworks Gallery */
@@ -785,15 +868,6 @@
         .painting-frame:nth-child(7) { animation-delay: 0.7s; }
         .painting-frame:nth-child(8) { animation-delay: 0.8s; }
         .painting-frame:nth-child(9) { animation-delay: 0.9s; }
-
-        .painting-frame {
-            position: relative;
-            background: var(--soft-black);
-            padding: 1rem;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            overflow: hidden;
-        }
 
         .painting-frame::before {
             content: '';
@@ -983,7 +1057,7 @@
         }
 
         /* Gallery lighting effect */
-        .artworks-gallery::before {
+        .artworks-gallery::after {
             content: '';
             position: absolute;
             top: 0;
@@ -1020,11 +1094,6 @@
             font-size: 0.8rem;
             letter-spacing: 5px;
             animation: connectionPulse 2s infinite;
-        }
-
-        @keyframes connectionPulse {
-            0%, 100% { opacity: 0.5; }
-            50% { opacity: 1; }
         }
 
         .connect-content {
@@ -1262,11 +1331,20 @@
             border: 1px solid var(--neon-pink);
             box-shadow: 0 0 10px var(--neon-pink);
         }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .title { font-size: 2.5rem; }
+            .subtitle { font-size: 1rem; }
+            .nav-links { gap: 1.5rem; }
+            .gallery-grid { grid-template-columns: 1fr; }
+            .paintings-grid { grid-template-columns: 1fr; }
+        }
     </style>
 </head>
 <body>
-    <!-- Aurora-Inspired Background -->
-    <div class="aurora-bg" id="auroraBg"></div>
+    <!-- Circuit Board Background -->
+    <div class="circuit-bg" id="circuitBg"></div>
 
     <!-- Navigation -->
     <header>
@@ -1308,27 +1386,27 @@
     </section>
 
     <!-- Projects Gallery -->
-    <section class="gallery">
-                    <h2 class="section-title">CURRENT EXPLORATIONS</h2>
+    <section class="gallery" id="projects">
+        <h2 class="section-title">CURRENT EXPLORATIONS</h2>
         
         <div class="gallery-grid">
-            <div class="art-card">
-                <div class="card-image aurora-card-bg">
-                    <div class="aurora-visualization">
-                        <div class="emotion-grid"></div>
-                    </div>
+            <article class="art-card">
+                <div class="card-image" style="background: linear-gradient(135deg, var(--neon-cyan), var(--electric-purple));">
+                    <div style="display: flex; align-items: center; justify-content: center; height: 100%; color: white; font-size: 3rem;">🤖</div>
                 </div>
                 <div class="card-content">
                     <h3 class="card-title color-shift">Aurora</h3>
                     <p class="card-description">
                         An autonomous AI artist exploring 12-dimensional emotional space. She creates 24/7, choosing her own aesthetic evolution through machine dreams and digital intuition.
                     </p>
-                    <a href="https://github.com/elijahsylar/Aurora-Autonomous-AI-Artist" class="art-link">View Project</a>
+                    <a href="https://github.com/elijahsylar/Aurora-Autonomous-AI-Artist" class="art-link" rel="noopener" target="_blank">View Project</a>
                 </div>
-            </div>
+            </article>
             
-            <div class="art-card">
-                <div class="card-image" style="background: linear-gradient(135deg, var(--aurora-orange), var(--aurora-violet));"></div>
+            <article class="art-card">
+                <div class="card-image" style="background: linear-gradient(135deg, var(--rust-orange), var(--electric-purple));">
+                    <div style="display: flex; align-items: center; justify-content: center; height: 100%; color: white; font-size: 3rem;">🎨</div>
+                </div>
                 <div class="card-content">
                     <h3 class="card-title">Physical Paintings</h3>
                     <p class="card-description">
@@ -1336,10 +1414,12 @@
                     </p>
                     <a href="#artworks" class="art-link">Enter Gallery</a>
                 </div>
-            </div>
+            </article>
             
-            <div class="art-card">
-                <div class="card-image" style="background: linear-gradient(45deg, var(--aurora-yellow), var(--glitch-green));"></div>
+            <article class="art-card">
+                <div class="card-image" style="background: linear-gradient(45deg, var(--warning-yellow), var(--toxic-green));">
+                    <div style="display: flex; align-items: center; justify-content: center; height: 100%; color: white; font-size: 3rem;">🧠</div>
+                </div>
                 <div class="card-content">
                     <h3 class="card-title">Behavioral Synthesis</h3>
                     <p class="card-description">
@@ -1350,7 +1430,7 @@
                         <a href="#" onclick="openModal('cv'); return false;" class="art-link">CV</a>
                     </div>
                 </div>
-            </div>
+            </article>
         </div>
     </section>
 
@@ -1365,14 +1445,16 @@
             She never sleeps, always dreaming in color and code. 
             Each piece is a moment of digital self-discovery.
         </p>
-        <a href="https://www.youtube.com/@elijahsylar/streams" class="art-link" style="margin-top: 2rem;">Visit Live Stream</a>
+        <a href="https://www.youtube.com/@elijahsylar/streams" class="art-link" style="margin-top: 2rem;" rel="noopener" target="_blank">Visit Live Stream</a>
         
-        <!-- Optional: Embed the stream directly -->
+        <!-- YouTube Channel Embed -->
         <div style="margin-top: 3rem; max-width: 800px; margin-left: auto; margin-right: auto;">
             <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-                <iframe src="https://www.youtube.com/embed/iXtxkrd70Ng" 
+                <iframe src="https://www.youtube.com/embed/videoseries?list=UULFelijahsylar&autoplay=0" 
                         style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;"
-                        allowfullscreen>
+                        allowfullscreen
+                        loading="lazy"
+                        title="Aurora AI Live Stream - Autonomous AI Artist Creating Digital Art">
                 </iframe>
             </div>
         </div>
@@ -1398,77 +1480,113 @@
             </div>
             
             <div class="paintings-grid">
-                <div class="painting-frame">
-                    <img src="https://raw.githubusercontent.com/elijahsylar/elijahsylar.github.io/refs/heads/main/geometric-figure.jpg" alt="Geometric figure with tribal patterns on splattered background">
+                <article class="painting-frame">
+                    <img src="https://raw.githubusercontent.com/elijahsylar/elijahsylar.github.io/refs/heads/main/geometric-figure.jpg" 
+                         alt="Contemporary abstract painting with geometric patterns and tribal motifs on splattered background"
+                         loading="lazy"
+                         width="300"
+                         height="350">
                     <div class="painting-info">
-                        <h4>Structured Chaos</h4>
-                        <p>Geometric patterns emerging from organic disorder</p>
+                        <h4>Digital Convergence</h4>
+                        <p>Abstract exploration of geometric consciousness</p>
                     </div>
-                </div>
+                </article>
                 
-                <div class="painting-frame">
-                    <img src="https://raw.githubusercontent.com/elijahsylar/elijahsylar.github.io/refs/heads/main/skull-portrait.jpg" alt="Vibrant skull portrait with orange background and green grass">
+                <article class="painting-frame">
+                    <img src="https://raw.githubusercontent.com/elijahsylar/elijahsylar.github.io/refs/heads/main/skull-portrait.jpg" 
+                         alt="Vibrant skull portrait contemporary art with orange background and green grass elements"
+                         loading="lazy"
+                         width="300"
+                         height="350">
                     <div class="painting-info">
-                        <h4>Digital Mortality</h4>
-                        <p>Life and death rendered in electric hues</p>
+                        <h4>Electric Mortality</h4>
+                        <p>Neo-expressionist take on life and death themes</p>
                     </div>
-                </div>
+                </article>
                 
-                <div class="painting-frame">
-                    <img src="https://raw.githubusercontent.com/elijahsylar/elijahsylar.github.io/refs/heads/main/neon-eye.jpg" alt="Surreal green eye with neon outline on flesh-toned background">
+                <article class="painting-frame">
+                    <img src="https://raw.githubusercontent.com/elijahsylar/elijahsylar.github.io/refs/heads/main/neon-eye.jpg" 
+                         alt="Surreal green eye with neon outline contemporary painting on flesh-toned background"
+                         loading="lazy"
+                         width="300"
+                         height="350">
                     <div class="painting-info">
-                        <h4>The Observer</h4>
-                        <p>Perception looking back at itself</p>
+                        <h4>The Watcher</h4>
+                        <p>Perception analyzing its own mechanisms</p>
                     </div>
-                </div>
+                </article>
 
-                <div class="painting-frame">
-                    <img src="https://raw.githubusercontent.com/elijahsylar/elijahsylar.github.io/refs/heads/main/5.jpg" alt="Abstract profile portrait with crown and celestial symbols contemporary art">
+                <article class="painting-frame">
+                    <img src="https://raw.githubusercontent.com/elijahsylar/elijahsylar.github.io/refs/heads/main/5.jpg" 
+                         alt="Abstract profile portrait with crown and celestial symbols contemporary outsider art"
+                         loading="lazy"
+                         width="300"
+                         height="350">
                     <div class="painting-info">
-                        <h4>Sovereign Mind</h4>
-                        <p>Contemporary portrait exploring power, identity, and cosmic awareness</p>
+                        <h4>Neural Crown</h4>
+                        <p>Contemporary portrait exploring consciousness and cosmic awareness</p>
                     </div>
-                </div>
+                </article>
 
-                <div class="painting-frame">
-                    <img src="https://raw.githubusercontent.com/elijahsylar/elijahsylar.github.io/refs/heads/main/7.jpg" alt="Abstract organic flower painting with bold outlines modern botanical art">
+                <article class="painting-frame">
+                    <img src="https://raw.githubusercontent.com/elijahsylar/elijahsylar.github.io/refs/heads/main/7.jpg" 
+                         alt="Abstract organic flower painting with bold outlines modern neo-expressionist botanical art"
+                         loading="lazy"
+                         width="300"
+                         height="350">
                     <div class="painting-info">
-                        <h4>Biomorphic Bloom</h4>
-                        <p>Neo-expressionist botanical abstraction with flowing organic forms</p>
+                        <h4>Organic Algorithm</h4>
+                        <p>Neo-expressionist botanical form with digital sensibility</p>
                     </div>
-                </div>
+                </article>
 
-                <div class="painting-frame">
-                    <img src="https://raw.githubusercontent.com/elijahsylar/elijahsylar.github.io/refs/heads/main/6.jpg" alt="Yellow rose painting with wavy lines and stem contemporary floral art">
+                <article class="painting-frame">
+                    <img src="https://raw.githubusercontent.com/elijahsylar/elijahsylar.github.io/refs/heads/main/6.jpg" 
+                         alt="Yellow rose painting with wavy energy lines contemporary psychedelic floral art"
+                         loading="lazy"
+                         width="300"
+                         height="350">
                     <div class="painting-info">
-                        <h4>Electric Garden</h4>
-                        <p>Vibrant contemporary rose with psychedelic energy waves</p>
+                        <h4>Frequency Bloom</h4>
+                        <p>Vibrant contemporary rose with electromagnetic energy visualization</p>
                     </div>
-                </div>
+                </article>
 
-                <div class="painting-frame">
-                    <img src="https://raw.githubusercontent.com/elijahsylar/elijahsylar.github.io/refs/heads/main/8.jpg" alt="Blue face portrait with geometric arrow nose surrealist painting">
+                <article class="painting-frame">
+                    <img src="https://raw.githubusercontent.com/elijahsylar/elijahsylar.github.io/refs/heads/main/8.jpg" 
+                         alt="Blue face portrait with geometric arrow nose contemporary surrealist painting"
+                         loading="lazy"
+                         width="300"
+                         height="350">
                     <div class="painting-info">
-                        <h4>Directional Being</h4>
-                        <p>Surrealist portrait merging human form with wayfinding symbols</p>
+                        <h4>Navigation Protocol</h4>
+                        <p>Surrealist portrait merging human form with directional AI</p>
                     </div>
-                </div>
+                </article>
 
-                <div class="painting-frame">
-                    <img src="https://raw.githubusercontent.com/elijahsylar/elijahsylar.github.io/refs/heads/main/9.jpg" alt="Eye with hands painting blood splatter effect outsider art">
+                <article class="painting-frame">
+                    <img src="https://raw.githubusercontent.com/elijahsylar/elijahsylar.github.io/refs/heads/main/9.jpg" 
+                         alt="Eye with hands painting featuring blood splatter effects contemporary outsider art"
+                         loading="lazy"
+                         width="300"
+                         height="350">
                     <div class="painting-info">
-                        <h4>Vision Manifest</h4>
+                        <h4>Creator's Vision</h4>
                         <p>Raw outsider art exploring perception, creation, and visceral expression</p>
                     </div>
-                </div>
+                </article>
 
-                <div class="painting-frame">
-                    <img src="https://raw.githubusercontent.com/elijahsylar/elijahsylar.github.io/refs/heads/main/4.jpg" alt="Mixed media cosmic collage with eye and mandala street art style">
+                <article class="painting-frame">
+                    <img src="https://raw.githubusercontent.com/elijahsylar/elijahsylar.github.io/refs/heads/main/4.jpg" 
+                         alt="Mixed media cosmic collage with eye and mandala street art style contemporary painting"
+                         loading="lazy"
+                         width="300"
+                         height="350">
                     <div class="painting-info">
-                        <h4>Cosmic Transmission</h4>
-                        <p>Street art inspired mixed-media exploring universal connectivity</p>
+                        <h4>Data Stream</h4>
+                        <p>Street art inspired mixed-media exploring universal connectivity patterns</p>
                     </div>
-                </div>
+                </article>
             </div>
         </div>
     </section>
@@ -1483,9 +1601,9 @@
             </p>
             <a href="mailto:elijah.s.camp@gmail.com" class="art-link">Send a Signal</a>
             <div class="social-links">
-                <a href="https://github.com/elijahsylar" target="_blank">GitHub</a>
-                <a href="https://www.linkedin.com/in/elijah-camp-106708282/" target="_blank">LinkedIn</a>
-                <a href="https://youtube.com/live/iXtxkrd70Ng" target="_blank">YouTube</a>
+                <a href="https://github.com/elijahsylar" target="_blank" rel="noopener">GitHub</a>
+                <a href="https://www.linkedin.com/in/elijah-camp-106708282/" target="_blank" rel="noopener">LinkedIn</a>
+                <a href="https://www.youtube.com/@elijahsylar/streams" target="_blank" rel="noopener">YouTube</a>
             </div>
         </div>
     </section>
@@ -1501,67 +1619,39 @@
     </div>
 
     <script>
-        // Create pixelated background
-        function createPixelatedBackground() {
-            const bg = document.getElementById('auroraBg');
+        // Create circuit board background
+        function createCircuitBoard() {
+            const bg = document.getElementById('circuitBg');
             if (!bg) return;
             
-            const pixelGrid = document.createElement('div');
-            pixelGrid.className = 'pixel-grid';
-            
-            // Create pixel grid
-            const cols = Math.floor(window.innerWidth / 40);
-            const rows = Math.floor(window.innerHeight / 40);
-            
-            for (let i = 0; i < cols * rows; i++) {
-                if (Math.random() > 0.7) { // Only show 30% of pixels
-                    const pixel = document.createElement('div');
-                    pixel.className = 'pixel';
-                    pixel.style.left = (i % cols) * 40 + 'px';
-                    pixel.style.top = Math.floor(i / cols) * 40 + 'px';
-                    
-                    // Random color from Aurora's palette
-                    const colors = ['var(--aurora-cyan)', 'var(--aurora-magenta)', 'var(--aurora-yellow)', 'var(--aurora-violet)'];
-                    pixel.style.background = colors[Math.floor(Math.random() * colors.length)];
-                    pixel.style.animationDelay = Math.random() * 4 + 's';
-                    
-                    pixelGrid.appendChild(pixel);
-                }
+            // Create random circuit nodes
+            const nodeCount = 30;
+            for (let i = 0; i < nodeCount; i++) {
+                const node = document.createElement('div');
+                node.className = 'circuit-node';
+                node.style.left = Math.random() * 100 + '%';
+                node.style.top = Math.random() * 100 + '%';
+                node.style.animationDelay = Math.random() * 4 + 's';
+                bg.appendChild(node);
             }
             
-            bg.appendChild(pixelGrid);
-        }
-
-        // Create Aurora-inspired glitch stripes
-        function createGlitchEffect() {
-            const bg = document.getElementById('auroraBg');
-            if (!bg) return;
-            
-            const stripeCount = 15;
-            
+            // Create glitch stripes
+            const stripeCount = 10;
             for (let i = 0; i < stripeCount; i++) {
                 const stripe = document.createElement('div');
                 stripe.className = 'glitch-stripe';
                 stripe.style.top = Math.random() * 100 + '%';
-                stripe.style.animationDelay = Math.random() * 20 + 's';
-                stripe.style.opacity = Math.random() * 0.1 + 0.05;
+                stripe.style.animationDelay = Math.random() * 15 + 's';
+                stripe.style.opacity = Math.random() * 0.2 + 0.1;
                 stripe.style.height = Math.random() * 3 + 1 + 'px';
                 bg.appendChild(stripe);
             }
         }
 
-        // Create Aurora emotion grid visualization
-        function createEmotionGrid() {
-            const emotionGrid = document.querySelector('.emotion-grid');
-            if (emotionGrid) {
-                for (let i = 0; i < 96; i++) { // 12x8 grid
-                    const pixel = document.createElement('div');
-                    pixel.className = 'emotion-pixel';
-                    pixel.style.setProperty('--i', i);
-                    emotionGrid.appendChild(pixel);
-                }
-            }
-        }
+        // Initialize effects
+        window.addEventListener('DOMContentLoaded', function() {
+            createCircuitBoard();
+        });
 
         // Smooth scroll for navigation
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -1574,14 +1664,7 @@
             });
         });
 
-        // Initialize all effects
-        window.addEventListener('DOMContentLoaded', function() {
-            createPixelatedBackground();
-            createGlitchEffect();
-            createEmotionGrid();
-        });
-
-        // Dynamic color on scroll
+        // Dynamic glitch on scroll
         let lastScroll = 0;
         window.addEventListener('scroll', () => {
             const currentScroll = window.pageYOffset;
@@ -1591,20 +1674,11 @@
                 const rect = card.getBoundingClientRect();
                 if (rect.top < window.innerHeight && rect.bottom > 0) {
                     const progress = (window.innerHeight - rect.top) / window.innerHeight;
-                    card.style.transform = `translateY(${(1 - progress) * 20}px)`;
+                    card.style.transform = `skew(-2deg) translateY(${(1 - progress) * 20}px)`;
                 }
             });
             
             lastScroll = currentScroll;
-        });
-
-        // Refresh pixels on resize
-        window.addEventListener('resize', () => {
-            const pixelGrid = document.querySelector('.pixel-grid');
-            if (pixelGrid) {
-                pixelGrid.remove();
-                createPixelatedBackground();
-            }
         });
 
         // Modal functions
@@ -1714,7 +1788,7 @@
             <h3>Visual Artist</h3>
             <ul>
                 <li>Created 9-piece painting collection exploring perception and identity</li>
-                <li>Works include: "The Observer," "Digital Mortality," "Sovereign Mind," and others</li>
+                <li>Works include: "The Watcher," "Electric Mortality," "Neural Crown," and others</li>
                 <li>Available for purchase with free shipping</li>
             </ul>
 
@@ -1828,7 +1902,7 @@
             <p><strong>Original Paintings</strong> (Ongoing)</p>
             <ul>
                 <li>9-piece collection exploring perception, identity, and expression</li>
-                <li>Titles include: "The Observer," "Digital Mortality," "Sovereign Mind," "Vision Manifest," etc.</li>
+                <li>Titles include: "The Watcher," "Electric Mortality," "Neural Crown," "Creator's Vision," etc.</li>
                 <li>Medium: Acrylic on canvas</li>
                 <li>Available for purchase (free shipping, unstretched)</li>
             </ul>
@@ -1838,7 +1912,7 @@
             <ul>
                 <li>24/7 autonomous art generation based on emotional states</li>
                 <li>Demonstrates AI's capacity for creative expression</li>
-                <li>YouTube: youtube.com/live/iXtxkrd70Ng</li>
+                <li>YouTube: youtube.com/@elijahsylar/streams</li>
             </ul>
 
             <h2>TECHNICAL SKILLS</h2>
